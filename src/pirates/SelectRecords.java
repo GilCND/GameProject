@@ -41,7 +41,8 @@ public class SelectRecords {
     }  
    
 
-    public static String getName(){
+    public static String getName()
+    {
         String sql = "SELECT id, name FROM players WHERE id = 1";
         String name = "";
 
@@ -62,6 +63,53 @@ public class SelectRecords {
         }
         return name;
     }
+    
+    public static String getScore()
+    {
+        String sql = "SELECT score, name FROM players WHERE id = 1";
+        String score = "";
+
+        try {
+            Connection conn = connect();
+            Statement stmt  = conn.createStatement();
+            ResultSet rs    = stmt.executeQuery(sql);
+
+
+            // loop through the result set
+            while (rs.next()) {
+
+            	score = rs.getString("score");
+            }
+
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return score;
+    }
+    
+    public static String getId()
+    {
+        String sql = "SELECT id, name FROM players WHERE id = 1";
+        String id = "";
+
+        try {
+            Connection conn = connect();
+            Statement stmt  = conn.createStatement();
+            ResultSet rs    = stmt.executeQuery(sql);
+
+
+            // loop through the result set
+            while (rs.next()) {
+
+            	id = rs.getString("id");
+            }
+
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+        }
+        return id;
+    }
+    
    
    
 }  

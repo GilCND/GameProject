@@ -460,7 +460,7 @@ public class Panel extends javax.swing.JPanel implements ActionListener
         System.out.println("x = " + x);
         System.out.println("y = " + y);
         System.out.println("State" +State);
-        System.out.println("User Name" + userName);
+        System.out.println("User Name" + userName); 
         
         if (Menu.play.contains(new Point(e.getPoint().x, e.getPoint().y-27))) changeGameState();		
         if (Menu.help.contains(new Point(e.getPoint().x, e.getPoint().y-27))) changeGameState();

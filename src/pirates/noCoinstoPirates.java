@@ -22,7 +22,6 @@ public class noCoinstoPirates {
 		if (file.exists())
 		{
 			//Database already exists retrieve variables
-
 		}
 		
 		

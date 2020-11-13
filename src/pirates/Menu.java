@@ -11,6 +11,7 @@ public class Menu {
 	public static Rectangle play = new Rectangle(290, 150,100,50);
 	public static Rectangle help = new Rectangle(290, 250,100,50);
 	public static Rectangle quit = new Rectangle(290, 350,100,50);
+	public static Rectangle chart = new Rectangle(200, 450,300,200);
 	
 	public static void render(Graphics g)
 	{
@@ -31,6 +32,14 @@ public class Menu {
 		g3d.draw(help);
 		g.drawString("Quit", quit.x+20, quit.y+35);
 		g3d.draw(quit);
+		String name = SelectRecords.getName();
+		String score = SelectRecords.getScore();
+		String id = SelectRecords.getId();
+		g.drawString("High SCORE", chart.x+60, chart.y+35);
+		g.drawString(id, chart.x+40, chart.y+75);
+		g.drawString(name, chart.x+80, chart.y+75);
+		g.drawString(score, chart.x+200, chart.y+75);
+		g3d.draw(chart);
 	
 	}
 	
